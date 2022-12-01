@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for news in news_list %}
+        {{ forloop.counter }}.{{ news.title }} - {{ news.publication_date|date:"d-m-Y" }}
+        <hr>
+    {% endfor %}
+{% endblock %}
